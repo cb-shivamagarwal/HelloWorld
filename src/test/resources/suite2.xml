@@ -1,0 +1,15 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="suite2">
+    <test name="test1">
+        <classes>
+            <class name="com.example.helloworld.suite2.class1" />
+            <class name="com.example.helloworld.suite2.class2" />
+        </classes>
+    </test>
+    <test name="test2">
+        <classes>
+            <class name="com.example.helloworld.suite2.class3" />
+            <class name="com.example.helloworld.suite2.class4" />
+        </classes>
+    </test>
+</suite>
