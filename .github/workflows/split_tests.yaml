@@ -30,7 +30,7 @@ jobs:
         id: split-tests
         name: Split tests
         with:
-          glob: src/test/java/resources/*.xml
+          glob: src/test/resources/*.xml
           exclude-glob: src/test/java/com/example/helloworld/HelloworldApplicationTests.java
           split-total: ${{ env.total-runners }}
           split-index: ${{ matrix.runner-index }}
