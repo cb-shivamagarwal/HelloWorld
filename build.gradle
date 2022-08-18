@@ -22,4 +22,8 @@ test {
 	useTestNG() {
 		suites file
 	}
+
+	afterTest { desc, result ->
+		logger.quiet "Executing test ${desc.name} [${desc.className}] with result: ${result.resultType}"
+	}
 }
