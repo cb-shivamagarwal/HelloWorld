@@ -34,4 +34,4 @@ jobs:
           exclude-glob: src/test/java/com/example/helloworld/HelloworldApplicationTests.java
           split-total: ${{ env.total-runners }}
           split-index: ${{ matrix.runner-index }}
-      - run: './gradlew --test ${{ join(steps.split-tests.outputs.test-suite, " --test ") }}'
+      - run: ./gradlew test --tests ${{ join(steps.split-tests.outputs.test-suite, ' --tests ') }}
