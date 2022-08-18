@@ -1,7 +1,7 @@
 name: Example Workflow
 on: push
 env:
-  total-runners: 4
+  total-runners: 2
 
 jobs:
   runner-indexes:
@@ -30,7 +30,7 @@ jobs:
         id: split-tests
         name: Split tests
         with:
-          glob: src/test/java/**/*.java
+          glob: src/test/java/resources/*.xml
           exclude-glob: src/test/java/com/example/helloworld/HelloworldApplicationTests.java
           split-total: ${{ env.total-runners }}
           split-index: ${{ matrix.runner-index }}
