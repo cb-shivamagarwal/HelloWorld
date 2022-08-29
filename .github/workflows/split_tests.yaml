@@ -1,5 +1,12 @@
 name: Example Workflow
-on: push
+on: 
+  push:
+  workflow_dispatch:
+    inputs:
+      cb-qa-sidecar-branch:
+        description: 'Branch of cb-app-qa-sidecar to use for building sidecar'
+        required: true
+        default: 'main'
 env:
   total-runners: 2
 
