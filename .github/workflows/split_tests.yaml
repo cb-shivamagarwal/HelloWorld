@@ -36,7 +36,7 @@ jobs:
         if: ${{ github.event_name == 'push' }}
       - uses: actions/checkout@v2
         with:
-          ref: ${{ github.event.inputs.cb-qa-sidecar-branch
+          ref: ${{ github.event.inputs.cb-qa-sidecar-branch }}
         if: ${{ github.event_name == 'workflow_dispatch' }}
       - uses: chaosaffe/split-tests@v1-alpha.1
         id: split-tests
